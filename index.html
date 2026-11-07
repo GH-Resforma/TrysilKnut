@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Trysil-Knut løyper</title>
+  <meta name="theme-color" content="#2e5e3e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Trysil-Knut">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="status" class="panel" hidden>
+    <div id="status-main">–</div>
+    <div id="status-sub"></div>
+  </div>
+
+  <div class="buttons">
+    <button id="btn-locate" class="round" title="Min posisjon" aria-label="Min posisjon">
+      <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="currentColor"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4" stroke="currentColor" stroke-width="2"/></svg>
+    </button>
+    <button id="btn-menu" class="round" title="Meny" aria-label="Meny">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+
+  <div id="menu" class="panel sheet" hidden>
+    <h2>Trysil-Knut løyper</h2>
+
+    <section>
+      <h3>Bruk uten dekning</h3>
+      <p id="offline-info">Last ned kartet for området mens du har wifi, så virker appen på fjellet.</p>
+      <div class="progress" id="progress" hidden><div id="progress-bar"></div></div>
+      <button id="btn-download" class="wide">Last ned kart (ca. 75 MB)</button>
+    </section>
+
+    <section>
+      <h3>Løypene</h3>
+      <p>Digitalisert fra turkartet til Trysil-Knuts fjellverden. Linjene kan avvike 30–60 m fra faktisk trasé – følg merking og spor i terrenget.</p>
+      <p><a href="data/Trysilknut-loyper.gpx" download>Last ned GPX</a> · <a href="data/Trysilknut-loyper.kml" download>KML</a></p>
+    </section>
+
+    <section class="small">
+      Kart © <a href="https://www.kartverket.no/" target="_blank" rel="noopener">Kartverket</a> (CC BY 4.0).
+      Løyper vedlikeholdes av <a href="https://www.trysilknutfjellverden.no/" target="_blank" rel="noopener">Trysil-Knuts fjellverden</a>.
+      <br><span id="version"></span>
+    </section>
+
+    <button id="btn-close" class="wide secondary">Lukk</button>
+  </div>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "Trysil-Knut løyper",
+  "short_name": "Trysil-Knut",
+  "description": "Løypekart for Trysil-Knuts fjellverden med Kartverkets topokart og GPS-posisjon.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#2e5e3e",
+  "theme_color": "#2e5e3e",
+  "lang": "no",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
